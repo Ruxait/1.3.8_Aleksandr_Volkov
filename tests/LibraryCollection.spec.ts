@@ -49,7 +49,7 @@ describe('LibraryCollection', () => {
     const info = library.getBookInfo('fake-id');
     expect(info).toBeNull();
   });
-
+  
   // getAllBooks
   it('возвращает список всех книг', () => {
     const id1 = library.addBook('Капитанская дочка', 'А.С. Пушкин') as string;

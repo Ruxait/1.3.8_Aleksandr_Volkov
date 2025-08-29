@@ -3,11 +3,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.LibraryCollection = void 0;
 class LibraryCollection {
     books = [];
+    constructor() { }
     generateId() {
         return Math.random().toString(36).substring(2, 9);
     }
     addBook(title, author) {
-        const exists = this.books.find((b) => (b.title = title));
+        const exists = this.books.find((b) => (b.title === title));
         if (exists) {
             return new Error(`Книга "${title}" уже существует в коллекции`);
         }
